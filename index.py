@@ -45,3 +45,53 @@ def function_working_with_global_variable():
 
 function_working_with_global_variable()
 print(third_collection_value)
+
+exec(open('print-hello-world.py', 'r').read())
+
+with open('print-hello-world.py', 'r') as file:
+  exec(file.read())
+
+a = 'a'
+b = 'b'
+c = 'c'
+
+print(a + b + c)
+
+print('a' 'b' 'c')
+
+print('a', 'b', "\"c\"", sep = "\n")
+
+# name = input('Insert your name \n')
+# age = int(input('Insert your age \n'))
+
+# f_string = f'Your name is {name} and you are {age}'
+
+# print(f_string)
+
+q, w, e = 1, 2, 3
+
+q = 10
+
+print(q, w, e)
+
+print('Sum', 2 + 3)
+print('Difference', 5 - 3)
+print('Multiplication', 2 * 7)
+print('Division (float)', 8 / 4)
+print('Division (int)', 9 // 2)
+print('Modulo', 9 % 2)
+print('Exponent', 2**4)
+print('Exponent', 4**2)
+print('=============')
+print(123 + 456)
+print(897.5 - 456.4)
+print(345 * 789)
+print(19 / 5)
+print(725 * (14 + 18.2))
+print(897 - (-456))
+print((9.5 * 4.5 - 2.5 * 3) / (45.5 - 3.5))
+
+rodjendan = int(input('How old are you? '))
+godina = int(input('What is the year you celebrated birthday in? '))
+
+print(f'You are born in year {godina - rodjendan}')
