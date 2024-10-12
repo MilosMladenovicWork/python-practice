@@ -95,3 +95,26 @@ rodjendan = int(input('How old are you? '))
 godina = int(input('What is the year you celebrated birthday in? '))
 
 print(f'You are born in year {godina - rodjendan}')
+
+print(
+  bool('Hello World!'),
+  bool(10),
+  bool(False),
+  bool(None),
+  bool(0),
+  bool(""), 
+  bool(-10)
+)
+
+month_number = int(input('Insert month number: '))
+
+if month_number < 1 or month_number > 12:
+  print('You entered incorrect month number!')
+elif month_number >= 1 and month_number <= 3:
+  print('Month belongs in 1. quartal')
+elif month_number >= 4 and month_number <= 6:
+  print('Month belongs in 2. quartal')
+elif month_number >= 7  and month_number <= 9:
+  print('Month belongs in 3. quartal')
+else:
+  print('Month belongs in 4. quartal')
