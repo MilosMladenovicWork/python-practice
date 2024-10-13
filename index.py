@@ -106,15 +106,34 @@ print(
   bool(-10)
 )
 
-month_number = int(input('Insert month number: '))
+# month_number = int(input('Insert month number: '))
 
-if month_number < 1 or month_number > 12:
-  print('You entered incorrect month number!')
-elif month_number >= 1 and month_number <= 3:
-  print('Month belongs in 1. quartal')
-elif month_number >= 4 and month_number <= 6:
-  print('Month belongs in 2. quartal')
-elif month_number >= 7  and month_number <= 9:
-  print('Month belongs in 3. quartal')
-else:
-  print('Month belongs in 4. quartal')
+# if month_number < 1 or month_number > 12:
+#   print('You entered incorrect month number!')
+# elif month_number >= 1 and month_number <= 3:
+#   print('Month belongs in 1. quartal')
+# elif month_number >= 4 and month_number <= 6:
+#   print('Month belongs in 2. quartal')
+# elif month_number >= 7  and month_number <= 9:
+#   print('Month belongs in 3. quartal')
+# else:
+#   print('Month belongs in 4. quartal')
+
+number_of_seconds = int(input('Insert number of seconds: '))
+
+number_of_seconds_in_minute = 60
+number_of_seconds_in_hour = 3600
+number_of_seconds_in_day = 86400
+
+days = number_of_seconds // number_of_seconds_in_day
+hours = (number_of_seconds - days * number_of_seconds_in_day) // number_of_seconds_in_hour
+minutes = (number_of_seconds - days * number_of_seconds_in_day - hours * number_of_seconds_in_hour) // number_of_seconds_in_minute
+seconds = number_of_seconds - days * number_of_seconds_in_day - hours * number_of_seconds_in_hour - minutes * number_of_seconds_in_minute
+
+if number_of_seconds >= number_of_seconds_in_day:
+  print(f'{days} days, {hours} hours, {minutes} minutes and {seconds} seconds')
+elif number_of_seconds >= number_of_seconds_in_hour:
+  print(f'{hours} hours and {minutes} minutes and {seconds} seconds')
+elif number_of_seconds >= number_of_seconds_in_minute:
+  print(f'{minutes} minutes and {seconds} seconds')
+
